@@ -1,0 +1,28 @@
+<div class="container text-center">
+    <div class="row">
+        <h1>Currency Converter</h1>
+    </div>
+
+    <div class="row">
+        <form class="row my-form" [formGroup]="converter">
+
+            <div class="col-3"> <input type="number" formControlName="sum" placeholder="enter sum to convert"></div>
+            <div class="col-1">from:</div>
+            <div class="col-3"><select (change)="convert()" class="w-100" formControlName="from">
+          <option *ngFor="let op of allOptions|async, let i = index" [value]="op" >{{op}}</option>
+        </select></div>
+
+            <div class="col-1">to:</div>
+            <div class="col-3"> <select (change)="convert()" class="w-100" formControlName="to">
+          <option *ngFor="let option of allOptions|async" [value]="option">{{option}}</option>
+        </select></div>
+        </form>
+    </div>
+    <div *ngIf="show" class="row blue-text">
+        <h1>{{converter.controls['sum']?.value}} {{converter.controls['from']?.value}}= {{converter.controls['converted_sum']?.value}} {{converter.controls['to'].value}}
+        </h1>
+    </div>
+
+
+
+</div>
