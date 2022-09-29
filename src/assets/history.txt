@@ -1,0 +1,1 @@
+[{"sum":343,"from":"ANG","to":"AMD","converted_sum":78221.15000000001},{"sum":343,"from":"ANG","to":"AZN","converted_sum":324.9239}]
