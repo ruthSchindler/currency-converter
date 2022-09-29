@@ -1,8 +1,32 @@
-<ul>
-    <li *ngFor="let item of historyList">
-        <div>
-            <h1>{{item.sum}} {{item.from}}= {{item.converted_sum}} {{item.to}}
-            </h1>
-        </div>
-    </li>
-</ul>
+<div class="container ">
+    <div class="row p-3">
+        <h3>history</h3>
+    </div>
+    <div class="row">
+        <ul class="text-center">
+            <div *ngFor="let item of oldHistoryList">
+                <div>
+                    <h1 class="grey-text">{{item.sum}} {{item.from}}= {{item.converted_sum}} {{item.to}}
+                    </h1>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <hr>
+    <div class="row p-3">
+        <h3>new</h3>
+    </div>
+    <div class="row">
+        <ul class="text-center">
+            <div *ngFor="let item of historyList">
+                <div>
+                    <h1 class="blue-text">{{item.sum}} {{item.from}}= {{item.converted_sum}} {{item.to}}
+                    </h1>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="row justify-content-center" *ngIf="historyList.length>0">
+        <button class=" btn-save" (click)="saveHistroy()">saveHistory</button>
+    </div>
+</div>
