@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   constructor(private converter_service:ConverterService) { }
   
   ngOnInit(): void {
-    this.converter_service.initAllOption();
+    this.converter_service.initOnStart();
   }
   title = 'currency-converter';
 
